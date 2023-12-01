@@ -16,4 +16,3 @@ for filename in csv_files:
         temp_df = df.loc[df[col] == STRING_TO_SEARCH_FOR]
         val = temp_df.iloc[0, 0]
         print(f"  * Found string `{STRING_TO_SEARCH_FOR}` in column `{col}` at ID: {val}")
-        # print("  * Row ID: " + str(val))
