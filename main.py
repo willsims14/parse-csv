@@ -12,7 +12,9 @@ for filename in csv_files:
     print(filename)
     filepath = os.path.join('data/', filename)
     df = pd.read_csv(filepath)
-    for col in COLS_TO_SEARCH:
+    for i, col in enumerate(COLS_TO_SEARCH):
         temp_df = df.loc[df[col] == STRING_TO_SEARCH_FOR]
         val = temp_df.iloc[0, 0]
         print(f"  * Found string `{STRING_TO_SEARCH_FOR}` in column `{col}` at ID: {val}")
+
+    print(f"Count of TARGET fount: '{i + 1}'")
